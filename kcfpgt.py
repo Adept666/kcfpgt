@@ -1,17 +1,14 @@
+from DIP import DIP_create
+from SO import SO_create
+
 print('KiCad Footprint Generation Tool')
 print('Enter FP type:')
 series = input()
 
 if series == 'DIP':
-	f = open('P-DIP-28.kicad_mod', 'w')
-	f.write(')')
-	f.close()
+	DIP_create(28)
 elif series == 'SO':
-	f = open('P-SO-28W.kicad_mod', 'w')
-	f.write(')')
-	f.close()
-	f = open('P-SO-28X.kicad_mod', 'w')
-	f.write(')')
-	f.close()
+	SO_create(28, 'W')
+	SO_create(28, 'X')
 else:
 	print('No matches')
