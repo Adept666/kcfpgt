@@ -16,6 +16,49 @@ def F_SilkS(f, n, w = ''):
 	return 0
 
 def F_Fab(f, n, w = ''):
+	if w == '':
+		a = 6.605
+	elif w == 'L':
+		a = 9.02
+	elif w == 'X':
+		a = 13.525
+	#
+	if (n == 8) and (w == ''):
+		b = 9.88
+	#
+	elif (n == 14) and (w == ''):
+		b = 19.305
+	#
+	elif (n == 16) and (w == ''):
+		b = 20.13
+	#
+	elif (n == 18) and (w == ''):
+		b = 22.48
+	#
+	elif (n == 20) and (w == ''):
+		b = 25.2
+	#
+	elif (n == 22) and (w == 'L'):
+		b = 27.555
+	#
+	elif (n == 24) and (w == ''):
+		b = 30.45
+	elif (n == 24) and (w == 'L'):
+		b = 30.095
+	elif (n == 24) and (w == 'X'):
+		b = 31
+	#
+	elif (n == 28) and (w == ''):
+		b = 35.2
+	elif (n == 28) and (w == 'X'):
+		b = 37.4
+	#
+	elif (n == 40) and (w == 'X'):
+		b = 51.75
+	#
+	elif (n == 48) and (w == 'X'):
+		b = 61.9
+	#
 	return 0
 
 def F_CrtYd(f, n, w = ''):
