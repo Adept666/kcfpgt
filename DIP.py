@@ -59,6 +59,14 @@ def F_Fab(f, n, w = ''):
 	elif (n == 48) and (w == 'X'):
 		b = 61.9
 	#
+	yt = str(-b / 2)
+	yb = str(b / 2)
+	xl = str(-a / 2)
+	xr = str(a / 2)
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.Fab) (width 0.2))\n' % (xl, yt, xr, yt))
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.Fab) (width 0.2))\n' % (xl, yb, xr, yb))
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.Fab) (width 0.2))\n' % (xl, yt, xl, yb))
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.Fab) (width 0.2))\n' % (xr, yt, xr, yb))
 	return 0
 
 def F_CrtYd(f, n, w = ''):
