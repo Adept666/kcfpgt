@@ -7,7 +7,7 @@ def head(f, n, w = ''):
 	f.write('  (fp_text reference REF** (at 0 %.3f) (layer F.SilkS)\n' % ref_y)
 	f.write('    (effects (font (size 1 1) (thickness 0.2)))\n')
 	f.write('  )\n')
-	f.write('  (fp_text value P-DIP-%02d (at 0 %.3f) (layer F.Fab) hide\n' % (n, val_y))
+	f.write('  (fp_text value P-DIP-%02d (at 0 %.3f) (layer F.Fab)\n' % (n, val_y))
 	f.write('    (effects (font (size 1 1) (thickness 0.2)))\n')
 	f.write('  )\n')
 	return 0
