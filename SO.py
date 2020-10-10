@@ -13,6 +13,24 @@ def head(f, n, w = ''):
 	return 0
 
 def F_SilkS(f, n, w = ''):
+	if w == '':
+		a = 8.89
+	elif w == 'A':
+		a = 8.89
+	elif w == 'W':
+		a = 12.7
+	elif w == 'X':
+		a = 13.97
+	e = 1.27
+	b = e * (0.5 * n + 1)
+	yt = str(-b / 2)
+	yb = str(b / 2)
+	xl = str(-a / 2)
+	xr = str(a / 2)
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.SilkS) (width 0.2))\n' % (xl, yt, xr, yt))
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.SilkS) (width 0.2))\n' % (xl, yb, xr, yb))
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.SilkS) (width 0.2))\n' % (xl, yt, xl, yb))
+	f.write('  (fp_line (start %s %s) (end %s %s) (layer F.SilkS) (width 0.2))\n' % (xr, yt, xr, yb))
 	return 0
 
 def F_Fab(f, n, w = ''):
